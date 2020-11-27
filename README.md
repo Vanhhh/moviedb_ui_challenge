@@ -42,4 +42,4 @@ Styled-Components, Plain CSS, SCSS, SASS - go with what you like.
 
 Please also consider as shown in the layouts, how the app should look for mobile devices.
 
-![DEMO GIF](https://github.com/volkermatthes/moviedb_ui_challenge/_readme/demo.gif?raw=true)
+![DEMO GIF](https://github.com/volkermatthes/moviedb_ui_challenge/blob/main/_readme/demo.gif?raw=true)
