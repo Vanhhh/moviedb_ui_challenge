@@ -42,4 +42,6 @@ Styled-Components, Plain CSS, SCSS, SASS - go with what you like.
 
 Please also consider as shown in the layouts, how the app should look for mobile devices.
 
+Here is a link to all layouts created for the challenge: [Figma Workspace for MovieDB](https://www.figma.com/file/kSc4r8TmCN4aHqWsHIW95Y/UI-Coding-Challenge?node-id=0%3A1)
+
 ![DEMO GIF](https://github.com/volkermatthes/moviedb_ui_challenge/blob/main/_readme/demo.gif?raw=true)
