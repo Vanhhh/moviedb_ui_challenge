@@ -1,4 +1,133 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$color-blue: #28a5ff;
+$color-white: #ffffff;
+$color-white-gray: #f4f4f4;
+
 .App {
-  font-family: sans-serif;
   text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 40rem;
+  //background: $color-white-gray;
+}
+
+.Movie {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.movieList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*display: grid;
+  grid-template-columns: 25rem 25rem 25rem;
+  grid-gap: 3.2rem;*/
+  justify-content: center;
+  //background: $color-white-gray;
+}
+
+.movie {
+  margin: 3.2rem;
+  position: relative;
+
+  .movie__img {
+    //padding: 3.2rem;
+    border-radius: 0.5rem;
+  }
+  .movie__img:hover {
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.4);
+  }
+
+  .movie__bottom-container {
+    text-align: left;
+    margin-top: 1.6rem;
+
+    .movie__title {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .movie__date {
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: #bcbcbc;
+      line-height: 1.8rem;
+    }
+  }
+
+  .movie__vote {
+    background: $color-blue;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    padding: 1.1rem 0.9rem;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 8rem;
+    right: 1rem;
+  }
+}
+.web__title {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4rem;
+  margin: 4.8rem;
+}
+#title__movie {
+  color: #28a5ff;
+}
+.search {
+  background: $color-white-gray;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  width: 35rem;
+  height: 5.6rem;
+  left: 0rem;
+  top: calc(50% - 56rem / 2);
+  border: none;
+  border-radius: 0.5rem;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+.search:active {
+  border: 0.2rem;
+  border-color: $color-blue;
+  box-sizing: border-box;
+  background-color: $color-white;
+}
+.search:hover {
+  background: #eaeaea;
+}
+.search-submit {
+  background: url("https://api.iconify.design/fe-search.svg") no-repeat center
+    center / contain;
+  z-index: 5;
+  background: $color-blue;
+  width: 5.6rem;
+  height: 5.6rem;
+  left: 35.8rem;
+  top: 0rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
 }

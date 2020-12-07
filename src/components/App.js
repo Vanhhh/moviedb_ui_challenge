@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { TMDB_API_KEY } from "../api/key";
-
 import Movie from "./Movie";
+{
+  /*import { Search } from "react-feather";*/
+}
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -44,26 +46,38 @@ export default function App() {
     event.preventDefault();
   };
 
+  const movieListHtmlElement =
+    data && data.length ? (
+      <div className="movieList">
+        {data.map((item) => (
+          <Movie key={item.id} movie={item} className="movie" />
+        ))}
+      </div>
+    ) : (
+      <span>Bitte suche etwas</span>
+    );
+
   return (
     <div className="App">
-      <h1>MovieDB</h1>
+      <h1 className="web__title">
+        <span id="title__movie">Movie</span>
+        <span>DB</span>
+      </h1>
       <form onSubmit={onSubmit}>
         <input
           type="text"
           name="search"
+          placeholder="Type in search query..."
+          className="search"
           value={queryText}
           ref={searchInput}
           onChange={(e) => setQueryText(e.value)}
         />
-        <input type="submit" value="Suchen" />
+
+        {/*<Search className="search-submit" color="white"/>*/}
+        <input type="submit" value="Suchen" className="search-submit" />
       </form>
-      {loading ? (
-        <p>Loading...</p>
-      ) : data && data.length ? (
-        data.map((item) => <Movie key={item.id} movie={item} />)
-      ) : (
-        <span>Bitte suche etwas</span>
-      )}
+      {loading ? <p>Loading...</p> : movieListHtmlElement}
     </div>
   );
 }
