@@ -2,9 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { TMDB_API_KEY } from "../api/key";
 import Movie from "./Movie";
-{
-  /*import { Search } from "react-feather";*/
-}
+
+import { Search } from "react-feather";
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -54,7 +53,7 @@ export default function App() {
         ))}
       </div>
     ) : (
-      <span>Bitte suche etwas</span>
+      <span></span>
     );
 
   return (
@@ -63,7 +62,7 @@ export default function App() {
         <span id="title__movie">Movie</span>
         <span>DB</span>
       </h1>
-      <form onSubmit={onSubmit}>
+      <form className="form" onSubmit={onSubmit}>
         <input
           type="text"
           name="search"
@@ -73,9 +72,9 @@ export default function App() {
           ref={searchInput}
           onChange={(e) => setQueryText(e.value)}
         />
-
-        {/*<Search className="search-submit" color="white"/>*/}
-        <input type="submit" value="Suchen" className="search-submit" />
+        <button className="search-submit">
+          <Search color="white" />
+        </button>
       </form>
       {loading ? <p>Loading...</p> : movieListHtmlElement}
     </div>
