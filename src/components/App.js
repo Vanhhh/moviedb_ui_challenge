@@ -60,10 +60,6 @@ export default function App() {
     width: 80%;
     margin: 4rem auto 0 auto;
   `;
-  const Movie = styled.div`
-    margin-bottom: 3rem;
-    overflow: hidden;
-  `;
 
   const WebTitle = styled.h1`
     font-weight: bold;

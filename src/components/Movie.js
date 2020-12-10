@@ -7,6 +7,7 @@ import styled from "styled-components";
 ///colors////
 const colorblue = "#28a5ff";
 const colorwhite = "#ffffff";
+
 const MovieImg = styled.div`
   height: 27.27vw;
   border-radius: 0.5rem;
