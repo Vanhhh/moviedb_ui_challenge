@@ -49,7 +49,6 @@ export default function App() {
 
   ///colors////
   const colorblue = "#28a5ff";
-  const colorwhitegray = "#f4f4f4";
 
   const MovieList = styled.div`
     display: grid;
@@ -70,26 +69,7 @@ export default function App() {
   const TitleMovie = styled.span`
     color: ${(props) => (props.title__movie = colorblue)};
   `;
-  const SearchInput = styled.input`
-    background: ${(props) => (props.search__input = colorwhitegray)};
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-    width: 35rem;
-    height: 5.6rem;
-    left: 0rem;
-    top: calc(50% - 56rem / 2);
-    border: none;
-    border-radius: 0.5rem;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-right: 0.8rem;
-    cursor: pointer;
-    padding: 1.65rem 0;
-    padding-left: 1.6rem;
-    box-sizing: border-box;
-    transition: all 0.2s;
-  `;
+
   const SearchSubMit = styled.button`
     background: ${(props) => (props.search__submit = colorblue)};
     width: 5.6rem;
@@ -99,18 +79,6 @@ export default function App() {
     border-radius: 0.5rem;
     border: none;
     cursor: pointer;
-  `;
-  const Form = styled.form`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `;
-  const App = styled.div`
-    text-align: center;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2rem;
   `;
 
   const movieListHtmlElement =
@@ -125,13 +93,13 @@ export default function App() {
     );
 
   return (
-    <App className="app">
+    <div className="App">
       <WebTitle className="web__title">
         <TitleMovie id="title__movie">Movie</TitleMovie>
         <span>DB</span>
       </WebTitle>
-      <Form className="form" onSubmit={onSubmit}>
-        <SearchInput
+      <form className="form" onSubmit={onSubmit}>
+        <input
           type="text"
           name="search"
           placeholder="Type in search query..."
@@ -143,8 +111,8 @@ export default function App() {
         <SearchSubMit className="search__submit">
           <Search color="white" />
         </SearchSubMit>
-      </Form>
+      </form>
       {loading ? <p>Loading...</p> : movieListHtmlElement}
-    </App>
+    </div>
   );
 }

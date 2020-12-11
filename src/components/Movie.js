@@ -7,6 +7,7 @@ import styled from "styled-components";
 ///colors////
 const colorblue = "#28a5ff";
 const colorwhite = "#ffffff";
+const colorgray = "#bcbcbc";
 
 const MovieImg = styled.div`
   height: 27.27vw;
@@ -16,6 +17,7 @@ const MovieImg = styled.div`
   background-position: center;
   position: relative;
   transition: all 0.5s;
+  margin-bottom: 3.2rem;
 `;
 
 const MovieVote = styled.span`
@@ -33,7 +35,8 @@ const MovieVote = styled.span`
 
 const MovieBottomContainer = styled.div`
   text-align: left;
-  margin-top: 1.6rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.6rem;
 `;
 const MovieTitle = styled.h3`
   font-weight: 700;
@@ -44,7 +47,7 @@ const MovieTitle = styled.h3`
 const MovieDate = styled.h4`
   font-weight: 400;
   font-size: 1.4rem;
-  color: $color-gray;
+  color: ${(props) => (props.movie__date = colorgray)};
   line-height: 1.8rem;
 `;
 
